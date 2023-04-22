@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        .container {
+            overflow: auto;
+            min-height: 400px;
+        }
+
+    body {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), linear-gradient(180deg, #460C68 13.48%, #40D06D 100%);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+
+
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 105%;
+  height: 90px;
+  background: linear-gradient(180deg, rgba(127, 22, 127, 0.2) 0%, rgba(70, 12, 104, 0.2) 100%);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  position: absolute;
+  width: 103px;
+  height: 104px;
+  left: 65px;
+  top: 15px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  
+}
+
+.logo img {
+  width: 65%;
+  height: 65%;
+  object-fit: contain;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 40px;
+}
+
+li {
+  margin-left: 24px;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: #FFFFFF;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+li:first-child {
+  margin-left: 0;
+}
+
+li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#Hello {
+  position: absolute;
+  width: 342px;
+  height: 160px;
+  left: 510px;
+  top: 250px;
+  font-family: 'Habibi';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 128px;
+  line-height: 160px;
+  color: #FFFFFF;
+  
+}
+
+#intro {
+  position: absolute;
+  width: 1186px;
+  height: 50px;
+  left: 142px;
+  top: 400px;
+  font-family: 'Habibi', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 50px;
+  color: #FFFFFF;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#about-me {
+  margin-top: 200px;
+  padding: 80px 0;
+  height: 400px;
+  margin-bottom: 200px;
+}
+
+
+#about-me h1 {
+  font-size: 40px;
+  margin-bottom: 150px;
+  font-family: 'Habibi', serif;
+  text-align: center;
+  color: #FFFFFF
+}
+
+#about-me .about-me-image {
+  width: 550px;
+  height: 450px;
+  float: left;
+  margin-left: 80px;
+  margin-top: -90px;
+}
+
+#about-me p {
+  font-family: 'Habibi', serif;
+  font-size: 24px;
+  line-height: 1.5;
+  max-width: 800px;
+  margin-top: 80px;
+  margin-bottom: 200px;
+  color: #FFFFFF;
+  float: right;
+  padding-right: 150px;
+}
+
+#blog-section {
+  margin-top: 200px;
+  padding: 80px 0;
+  height: 400px;
+  margin-bottom: 200px;
+}
+
+#blog-section h2 {
+  font-family: 'Habibi', serif;
+  font-size: 40px;
+  margin-bottom: 70px;
+  text-align: center;
+  color: #FFFFFF
+}
+
+#blog-section p {
+  font-family: 'Habibi', serif;
+  font-size: 24px;
+  line-height: 1.5;
+  margin-top: -50px;
+  margin-bottom: 150px;
+  text-align: center;
+  color: #FFFFFF
+}
+
+.hidden {
+  display: none;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.buttons img {
+  width: 50px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.img-container-1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.img-container-2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.img-container-1 img {
+  margin: 0 10px;
+  max-width: 100%;
+  transition: transform .2s;
+  height: auto;
+}
+
+.img-container-2 img {
+  margin: 0 10px;
+  max-width: 100%;
+  transition: transform .2s;
+  height: auto;
+}
+
+.img-container-1 img:hover {
+  transform: scale(1.1);
+}
+
+.img-container-2 img:hover {
+  transform: scale(1.1);
+}
+
+#b4-1-img {
+  position: relative;
+  z-index: 0;
+}
+
+#nextp1 {
+  position: absolute;
+  right: 0;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  z-index: 2; 
+}
+
+
+#backp1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: -23px;
+  margin-bottom: -4px;
+  z-index: 1; 
+}
+
+#b4-2-img {
+  position: relative;
+  z-index: 0; 
+}
+
+
+#blog-b1 {
+  font-family: 'Habibi';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 80px;
+  padding: 80px 0;
+  margin-left: 100px;
+  color: #FFFFFF;
+}
+
+#blog-b1 h3{
+  font-family: 'Habibi', serif;
+  font-size: 40px;
+  margin-bottom: 70px;
+  text-align: center;
+  color: #FFFFFF
+}
+
+#blog-b1 p{
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  line-height: 1.5;
+  max-width: 800px;
+  margin-top: 80px;
+  margin-bottom: 200px;
+  color: #FFFFFF;
+  float: right;
+  padding-right: 20px;
+}
+
+#blog-b1 .bb1-img {
+    float: left;
+    padding-left: 50px;
+    padding: 80px 0;
+}
+
+#blog-b2 {
+  font-family: 'Habibi';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 80px;
+  padding: 80px 0;
+  margin-left: 100px;
+  margin-right: 100px;
+  color: #FFFFFF;
+}
+
+#blog-b2 h4{
+  font-family: 'Habibi', serif;
+  font-size: 40px;
+  margin-bottom: 70px;
+  text-align: center;
+  color: #FFFFFF
+}
+
+#blog-b2 p{
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  line-height: 1.5;
+  max-width: 800px;
+  margin-top: 80px;
+  margin-bottom: 200px;
+  color: #FFFFFF;
+  float: right;
+  padding-right: 20px;
+}
+
+#blog-b2 .bb2-img {
+    float: left;
+    padding-left: 50px;
+    padding: 80px 0;
+}
+
+#blog-b3 {
+  font-family: 'Habibi';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 80px;
+  padding: 80px 0;
+  margin-left: 100px;
+  margin-right: 100px;
+  color: #FFFFFF;
+}
+
+#blog-b3 h5{
+  font-family: 'Habibi', serif;
+  font-size: 40px;
+  margin-bottom: 70px;
+  text-align: center;
+  color: #FFFFFF
+}
+
+#blog-b3 p{
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  line-height: 1.5;
+  max-width: 800px;
+  margin-top: 80px;
+  margin-bottom: 200px;
+  color: #FFFFFF;
+  float: right;
+  padding-right: 100px;
+}
+
+#blog-b3 .bb3-img {
+    float: left;
+    padding-left: 50px;
+    padding: 80px 0;
+}
+
+#blog-b4 {
+  font-family: 'Habibi';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 80px;
+  padding: 80px 0;
+  margin-left: 100px;
+  margin-right: 100px;
+  color: #FFFFFF;
+}
+
+#blog-b4 h6{
+  font-family: 'Habibi', serif;
+  font-size: 40px;
+  margin-bottom: 100px;
+  text-align: center;
+  color: #FFFFFF
+}
+
+#blog-b4 p{
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  line-height: 1.5;
+  max-width: 800px;
+  margin-top: 50px;
+  margin-bottom: 200px;
+  color: #FFFFFF;
+  float: right;
+  padding-right: 20px;
+}
+
+#blog-b4 .bb5-img {
+    float: left;
+    padding-left: 50px;
+    padding: 80px 0;
+}
+
+#blog-b5 {
+  font-family: 'Habibi';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 80px;
+  padding: 80px 0;
+  margin-left: 100px;
+  margin-right: 100px;
+  color: #FFFFFF;
+}
+
+#blog-b5 h1{
+  font-family: 'Habibi', serif;
+  font-size: 40px;
+  margin-bottom: 100px;
+  text-align: center;
+  color: #FFFFFF
+}
+
+#blog-b5 p{
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  line-height: 1.5;
+  max-width: 800px;
+  margin-top: 50px;
+  margin-bottom: 200px;
+  color: #FFFFFF;
+  float: right;
+  padding-right: 20px;
+}
+
+#blog-b5 .bb6-img {
+    float: left;
+    padding-left: 50px;
+    padding: 80px 0;
+}
+
+#blog-b6 {
+  font-family: 'Habibi';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 80px;
+  padding: 80px 0;
+  margin-left: 100px;
+  margin-right: 100px;
+  color: #FFFFFF;
+}
+
+#blog-b6 h1{
+  font-family: 'Habibi', serif;
+  font-size: 40px;
+  margin-bottom: 100px;
+  text-align: center;
+  color: #FFFFFF
+}
+
+#blog-b6 p{
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  line-height: 1.5;
+  max-width: 800px;
+  margin-top: 50px;
+  margin-bottom: 200px;
+  color: #FFFFFF;
+  float: right;
+  padding-right: 20px;
+}
+
+#blog-b6 .bb7-img {
+    float: left;
+    padding-left: 50px;
+    padding: 80px 0;
+}
+
+.FAQ-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.FAQ-container img {
+  margin-bottom: 150px; 
+  margin-top: 150px;
+}
+
+
+	</style>
+</head>
+<body>
+    <div class="container">
+    <nav>
+        <div class="logo">
+            <img src="mylogo.svg" alt="mylogo" id="mylogo">
+        </div>
+        <ul>
+            <li><a href="#" id="b-link">BLOG</a></li>
+            <li><a href="#" id="f-link">FAQs</a></li>
+            <li><a href="#" id="a-link">ABOUT ME</a></li>
+        </ul>
+      </nav> 
+    </div>
+    <div id="Hello">Hello!</div>
+    <div id="intro">I am Keshia Saguilayan, a second year BSIT student from USTP.</div>
+        <section id="about-me">
+            <h1>About Me</h1>
+            <img src="mypic.png" alt="this is me" class="about-me-image">
+            <p>Age: 19 years old<br>Birthdate: May 06, 2003<br>Birthplace: Cagayan de Oro<br>
+            Contact Number: 09971789828<br>Email: saguilayan.keshiadawn21@gmail.com
+            </p>   
+        </section>
+        <section id="blog-section">
+            <h2>Blog</h2>
+            <p>Browse my blog gallery and click to see post.</p>
+            <div class="img-container-1">
+                <img src="b1.svg" alt="B1" id="b1-img">
+                <img src="b2.svg" alt="B2" id="b2-img">
+                <img src="b3.svg" alt="B3" id="b3-img">
+                <img src="b4.1.svg" alt="B4.1" id="b4-1-img">
+                <img src="nextp1.svg" alt="NB1" id="nextp1">
+              </div>
+              <div class="img-container-2">
+                <img src="b4.2.svg" alt="B4.2" id="b4-2-img">
+                <img src="b5.svg" alt="B5" id="b5-img">
+                <img src="b6.svg" alt="B6" id="b6-img">
+                <img src="b7.svg" alt="B7" id="b7-img">
+                <img src="backp1.svg" alt="BB1" id="backp1">
+              </div>
+        </section>
+        <section id="blog-b1">
+            <h3>Blog Feed</h3>
+            <img src="b1.svg" alt="B1" id="bb1-img">
+            <p>I made this little edit for my #Ilustrados entry<br>
+               for my Rizal subject recently. I used PicsArt.<br> 
+               I’m surprised it turned out quite okay despite not knowing how to edit.
+            </p>
+        </section>
+        <section id="blog-b2">
+            <h4>Blog Feed</h4>
+            <img src="b2.svg" alt="B2" id="bb2-img">
+            <p>Since we had midterms last week, this is one of the<br>
+               topics I went through and made a reviewer about.<br> 
+               #Heinz Dilemma was super interesting as it involved<br>
+               questioning one’s moral compass.
+            </p>
+        </section>
+        <section id="blog-b3">
+            <h5>Blog Feed</h5>
+            <img src="b3.svg" alt="B3" id="bb3-img">
+            <p>Here’s me kicking some statue’s butt.<br>
+                I was feeling goofy so this picture got<br> 
+                taken while we were having a vacation.<br>
+                <br>
+                #FunMoments
+            </p>
+        </section>
+        <section id="blog-b4">
+            <h6>Blog Feed</h6>
+            <img src="b5.svg" alt="B5" id="bb5-img">
+            <p>This photo of me cosplaying Ada Lovelace for<br>
+                #ScienceTechnologyandSociety subject. Lovelace<br>
+                is regarded as the first ever computer programmer.<br> 
+                As a woman, it is such an honor to be history maker<br>
+                in technology.<br> 
+                <br>
+                #WomenInTech
+            </p>
+        </section>
+        <section id="blog-b5">
+            <h1>Blog Feed</h1>
+            <img src="b6.svg" alt="B6" id="bb6-img">
+            <p>A cute picture of me and my sister. I remember<br>
+               trying to just mind my own business when they<br> 
+               forced me to take a photo just because.<br> 
+               <br>
+               #MightBeHidingMyLaptopScreen
+            </p>
+        </section>
+        <section id="blog-b6">
+            <h1>Blog Feed</h1>
+            <img src="b7.svg" alt="B7" id="bb7-img">
+            <p>One thing about me is that I am into nails and<br>
+                I love pampering myself whenever I get the chance to.<br> 
+                <br>
+                #NailsOnFleek #Green
+            </p>
+        </section>
+        <section id="FAQs">
+            <div class="FAQ-container">
+                <img src="f1.svg" alt="FQ1" id="fq1-img">
+                <img src="f2.svg" alt="FQ2" id="fq2-img">
+                <img src="f3.svg" alt="FQ3" id="fq3-img">
+                <img src="f4.svg" alt="FQ4" id="fq4-img">
+            </div>
+        </section>
+          
+          
+    </div>
+</body>
+
+<script>
+    function scrollToSection() {
+        const section = document.querySelector('.container');
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+    
+    function clickLogo(){
+        const myLogo = document.getElementById('mylogo');
+        const helloDiv = document.getElementById('Hello');
+
+        myLogo.addEventListener('click', () => {
+        helloDiv.scrollIntoView({ behavior: 'smooth' });
+    });}
+    
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const bLink = document.getElementById("b-link");
+        const fLink = document.getElementById("f-link");
+        const aLink = document.getElementById("a-link");
+
+    bLink.addEventListener("click", function(event) {
+        event.preventDefault(); // prevent default link behavior
+        const blogSection = document.getElementById("blog-section");
+        blogSection.scrollIntoView({ behavior: "smooth" });
+    });
+
+    fLink.addEventListener("click", function(event) {
+        event.preventDefault(); // prevent default link behavior
+        const faqSection = document.getElementById("FAQs");
+        faqSection.scrollIntoView({ behavior: "smooth" });
+    });
+
+    aLink.addEventListener("click", function(event) {
+        event.preventDefault(); // prevent default link behavior
+        const aboutSection = document.getElementById("about-me");
+        aboutSection.scrollIntoView({ behavior: "smooth" });
+    });
+    });
+
+    
+    // Get references to the containers and buttons
+    const container1 = document.querySelector('.img-container-1');
+    const container2 = document.querySelector('.img-container-2');
+    const backBtn = document.getElementById('backp1');
+
+    // Hide the second container initially
+    container2.style.display = 'none';
+
+    // Add click event listener to the "next" button
+    const nextBtn = document.getElementById('nextp1');
+    nextBtn.addEventListener('click', () => {
+    // Hide the first container and show the second container
+    container1.style.display = 'none';
+    container2.style.display = 'flex';
+    nextBtn.style.display = 'none';
+    });
+
+    // Add click event listener to the "back" button
+    backBtn.addEventListener('click', () => {
+    container2.style.display = 'none';
+    container1.style.display = 'flex';
+    nextBtn.style.display = 'flex';
+    });
+
+
+    // Get the SVG element
+    const mySvg = document.getElementById('b1-img');
+
+    // Add a click event listener to the SVG
+    mySvg.addEventListener('click', () => {
+        // Redirect to the section with ID "my-section"
+        window.location.href = '#blog-b1';
+    });
+    
+
+    const mySvg2 = document.getElementById('b2-img');
+    mySvg2.addEventListener('click', () => {
+    window.location.href = '#blog-b2';
+    });
+
+    const mySvg3 = document.getElementById('b3-img');
+    mySvg3.addEventListener('click', () => {
+    window.location.href = '#blog-b3';
+    });
+
+    const mySvg4 = document.getElementById('b5-img');
+    mySvg4.addEventListener('click', () => {
+    window.location.href = '#blog-b4';
+    });
+
+    const mySvg5 = document.getElementById('b6-img');
+    mySvg5.addEventListener('click', () => {
+    window.location.href = '#blog-b5';
+    });
+
+    const mySvg6 = document.getElementById('b7-img');
+    mySvg6.addEventListener('click', () => {
+    window.location.href = '#blog-b6';
+    });
+
+</script>
+
+</html>
